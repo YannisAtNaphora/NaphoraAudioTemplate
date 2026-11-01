@@ -1,0 +1,129 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &495607394261883309
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3567728140744434979}
+  - component: {fileID: 7232476746967876191}
+  - component: {fileID: 8664367626202511705}
+  m_Layer: 0
+  m_Name: NaphoraAudioMusicManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3567728140744434979
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 495607394261883309}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7232476746967876191
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 495607394261883309}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 36a1d49cac125fa4bab3a8e2cfe33760, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::NaphoraMusicManager
+  plControllerGamePrefab: {fileID: 5826803128941932226, guid: 98d86ffbbc1c31945979c4578b5cd33a, type: 3}
+  plControllerMainMenuPrefab: {fileID: 5826803128941932226, guid: 5885e8a8ea00f5b4086ab12e6196ffa8, type: 3}
+  fadeDuration: 2
+  levelMusicTable:
+  - levelNumber: 0
+    playlistName: DefaultLevelMusic
+--- !u!114 &8664367626202511705
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 495607394261883309}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4961ed0cadeea614683dffd241ca235b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::AudioManagerBehaviour
+  _audioMixer: {fileID: 24100000, guid: 5f30c9753cbeea4418986ec231a147ce, type: 2}
+  _ambianceVolumeWithMusic: 0
+  _ambianceVolumeWithoutMusic: 1
+  _defaultMixTransitionTime: 0.5
+  _mixStateTransitions:
+  - from: 1
+    to: 0
+    transitionTime: 0.5
+  - from: 0
+    to: 1
+    transitionTime: 0.5
+  - from: 0
+    to: 2
+    transitionTime: 0.5
+  - from: 2
+    to: 0
+    transitionTime: 0.5
+  - from: 0
+    to: 3
+    transitionTime: 0.5
+  - from: 3
+    to: 0
+    transitionTime: 0.5
+  - from: 0
+    to: 4
+    transitionTime: 0.25
+  - from: 4
+    to: 0
+    transitionTime: 0.75
+  - from: 5
+    to: 1
+    transitionTime: 0
+  - from: 5
+    to: 0
+    transitionTime: 0.25
+  - from: 0
+    to: 6
+    transitionTime: 0.25
+  - from: 0
+    to: 5
+    transitionTime: 0.25
+  - from: 0
+    to: 5
+    transitionTime: 0.25
+  - from: 0
+    to: 5
+    transitionTime: 0.25
+  _mixStateSnapshots:
+  - state: 0
+    snapshot: {fileID: 24500006, guid: 5f30c9753cbeea4418986ec231a147ce, type: 2}
+  - state: 1
+    snapshot: {fileID: -6725757402723387868, guid: 5f30c9753cbeea4418986ec231a147ce, type: 2}
+  - state: 3
+    snapshot: {fileID: 8864803405660164221, guid: 5f30c9753cbeea4418986ec231a147ce, type: 2}
+  - state: 2
+    snapshot: {fileID: 1915295176081222290, guid: 5f30c9753cbeea4418986ec231a147ce, type: 2}
+  - state: 4
+    snapshot: {fileID: -7859518219968252068, guid: 5f30c9753cbeea4418986ec231a147ce, type: 2}
+  - state: 5
+    snapshot: {fileID: -3290711252436770516, guid: 5f30c9753cbeea4418986ec231a147ce, type: 2}
+  - state: 6
+    snapshot: {fileID: -3290711252436770516, guid: 5f30c9753cbeea4418986ec231a147ce, type: 2}
+  - state: 7
+    snapshot: {fileID: -6798989849310666260, guid: 5f30c9753cbeea4418986ec231a147ce, type: 2}
